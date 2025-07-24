@@ -914,6 +914,10 @@
                 <strong>¡Feliz Día de la Amistad Keila! 💖</strong>
             </span>
         </div>
+        <audio autoplay loop>
+            <source src="music/hbd.mpeg" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
 
         <script>
             document.getElementById('surpriseTrigger').addEventListener('click', function () {
@@ -963,6 +967,9 @@
             }
         `;
             document.head.appendChild(style);
+            document.addEventListener('click', function () {
+                document.getElementById('miAudio').play();
+            }, { once: true }); // Solo se ejecuta una vez
         </script>
 
 </body>
